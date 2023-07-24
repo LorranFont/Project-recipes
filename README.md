@@ -2,7 +2,7 @@
 
 # Project preview (not finished) 
 
-src="https://imgur.com/a/4NVDZXb">
+![Preview](Project-recipes\recipes\static\recipes\img\previa-recipes.png)
 
 ### 💻 tecnologias usadas:
 
