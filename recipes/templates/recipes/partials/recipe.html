@@ -73,7 +73,7 @@
 
     {% if is_datail_page is True %}
     <div class="preparation-staps">
-        {% if recipe.preparation-staps_is_html is True %}
+        {% if recipe.preparation_staps_is_html is True %}
             {{ recipe.preparation_staps|safe }}
         {% else %}
             {{ recipe.preparation_staps|linebreaksbr }}
