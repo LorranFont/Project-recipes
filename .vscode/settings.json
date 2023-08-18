@@ -9,29 +9,29 @@
     "explorer.compactFolders": false,
     "git.autofetch": true,
     "git.confirmSync": false,
-    "terminal.external.windowsExec": "C:\\WINDOWS\\System32\\PowerShell.exe",
-        "window.zoomLevel": 0,
-        "python.languageServer": "Pylance", // ms-python.vscode-pylance
-        "python.testing.unittestEnabled": false, // ms-python.python
-        "python.testing.pytestEnabled": true,
-        "python.testing.pytestArgs": [], // -x to bail
-        "python.linting.flake8Enabled": true,
-        "python.linting.mypyEnabled": true,
-        "python.linting.pylintArgs": [
-          "--load-plugins=pylint_django",
-          "--errors-only"
-        ],
-        "python.formatting.autopep8Args": ["--indent-size=4"],
-        "python.defaultInterpreterPath": "venv/bin/python",
-        "[python]": {
-          "editor.defaultFormatter": "ms-python.python", // ms-python.python
-          "editor.tabSize": 4,
-          "editor.insertSpaces": true,
-          "editor.formatOnSave": true,
-          "editor.formatOnType": true,
-          "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-          }
+    "window.zoomLevel": 0,
+    "python.languageServer": "Pylance", // ms-python.vscode-pylance
+    "python.testing.unittestEnabled": false, // ms-python.python
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [], // -x to bail
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.linting.pylintArgs": [
+      "--load-plugins=pylint_django",
+      "--errors-only",
+      // "--django-settings-module=project.settings"
+    ],
+    "python.formatting.autopep8Args": ["--indent-size=4"],
+    "python.defaultInterpreterPath": "venv/bin/python",
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.python", // ms-python.python
+      "editor.tabSize": 4,
+      "editor.insertSpaces": true,
+      "editor.formatOnSave": true,
+      "editor.formatOnType": true,
+      "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+        }
         },
         "[html]": {
           "editor.formatOnSave": true,
@@ -67,5 +67,12 @@
           "django-html": "html", // batisteo.vscode-django
           "javascript": "javascriptreact",
           "typescript": "typescriptreact"
-        }
+        },
+        "python.testing.unittestArgs": [
+          "-v",
+          "-s",
+          "./recipes",
+          "-p",
+          "*test.py"
+        ]
 }
