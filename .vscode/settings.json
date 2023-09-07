@@ -19,7 +19,7 @@
     "python.linting.pylintArgs": [
       "--load-plugins=pylint_django",
       "--errors-only",
-      // "--django-settings-module=project.settings"
+        "--django-settings-module=project.settings"
     ],
     "python.formatting.autopep8Args": ["--indent-size=4"],
     "python.defaultInterpreterPath": "venv/bin/python",
