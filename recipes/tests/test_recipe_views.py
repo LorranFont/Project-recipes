@@ -8,9 +8,13 @@ class RecipeViewsTest(TestCase):
         view = resolve(reverse('recipes:home'))
         self.assertIs(view.func, views.home)
 
-    def test_recipe_home_view_returns_status_code_200_ok(self):
-        response = self.client.get(reverse('recipes:home'))
-        self.assertAlmostEquals(response.status_code, 200)
+    def test_recipe_category_view_returns_404_if_no_recipes_found(self):
+        response = self.client.get(reverse('recipes:category', kwargs={'category_id': 1}))  # noqa:  E501
+        self.assertAlmostEquals(response.status_code, 404)
+
+    def test_recipe_detail_view_returns_404_if_no_recipes_found(self):
+        response = self.client.get(reverse('recipes:recipe', kwargs={'id': 1000}))  # noqa:  E501
+        self.assertAlmostEquals(response.status_code, 404)
 
     def test_recipe_home_view_loads_correct_template(self):
         response = self.client.get(reverse('recipes:home'))
