@@ -9,7 +9,7 @@
     "explorer.compactFolders": false,
     "git.autofetch": true,
     "git.confirmSync": false,
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
     "python.languageServer": "Pylance", // ms-python.vscode-pylance
     "python.testing.unittestEnabled": false, // ms-python.python
     "python.testing.pytestEnabled": true,
